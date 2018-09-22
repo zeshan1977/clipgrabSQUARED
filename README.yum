@@ -1,0 +1,7 @@
+  750  sudo yum makecache fast
+  777  sudo yum install ffmpeg ffmpeg-devel -y
+  794  sudo yum  install qt5-qtbase-devel
+  821  sudo yum install qt-devel
+yum install freeglut-devel
+yum install install libqt4-dev
+firstbranch

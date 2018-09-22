@@ -1,0 +1,98 @@
+  779  git init .
+  780  git add .
+  781  git --version
+  782  sudo yum update git
+  783  git --version
+  785  git history
+  786  git status
+  787  git commit .
+  788  git status
+  829  git status
+  830  git add .
+  832  git add .
+  833  git commit -m "changed the README.yum installed
+  835  env |grep git
+  841  sudo chmod a+rwx gitconfig
+  842  sudo chmod a+rwx .gitconfig
+  845  env |grep git
+  847  grep git ./.profile
+  852  git config --global user.name "Mohammed Zeshan home CENTOS7 LinuxVM"
+  853  git config --global user.email "khan.mza@gmail.com"
+  854  git config --global core.editor vi
+  855  git config --system http.sslverify false
+  856  sudo xtouch /etc/gitconfig
+  857  sudo chmod a+rwx  /etc/gitconfig
+  858  git config --global user.name "Mohammed Zeshan home CENTOS7 LinuxVM"
+  859  git config --global user.email "khan.mza@gmail.com"
+  860  git config --global core.editor vi
+  861  git config --system http.sslverify false
+  862  ls -ltr /etc/gitconfig
+  863  sudo chown /etc/gitconfig zesham2:zesham2 /etc/gitconfig
+  864  sudo chown zesham2:zesham2 /etc/gitconfig
+  865  git config --global user.name "Mohammed Zeshan home CENTOS7 LinuxVM"
+  866  git config --global user.email "khan.mza@gmail.com"
+  867  git config --global core.editor vi
+  868  git config --system http.sslverify false
+  870   git branch
+  871  git branch firstbranch
+  872  git branch
+  873  git checkout firstbranch 
+  875  git add README.yum
+  876  git commit -m "firstbrnach change"
+  877  git checkout master
+  878  git merge firstbranch 
+  879  git status
+  880  git branch
+  881  git branch -d firstbranch 
+  882  history |grep git >> README.gitcommands
+  779  git init .
+  780  git add .
+  781  git --version
+  782  sudo yum update git
+  783  git --version
+  785  git history
+  786  git status
+  787  git commit .
+  788  git status
+  829  git status
+  830  git add .
+  832  git add .
+  833  git commit -m "changed the README.yum installed
+  835  env |grep git
+  841  sudo chmod a+rwx gitconfig
+  842  sudo chmod a+rwx .gitconfig
+  845  env |grep git
+  847  grep git ./.profile
+  852  git config --global user.name "Mohammed Zeshan home CENTOS7 LinuxVM"
+  853  git config --global user.email "khan.mza@gmail.com"
+  854  git config --global core.editor vi
+  855  git config --system http.sslverify false
+  856  sudo xtouch /etc/gitconfig
+  857  sudo chmod a+rwx  /etc/gitconfig
+  858  git config --global user.name "Mohammed Zeshan home CENTOS7 LinuxVM"
+  859  git config --global user.email "khan.mza@gmail.com"
+  860  git config --global core.editor vi
+  861  git config --system http.sslverify false
+  862  ls -ltr /etc/gitconfig
+  863  sudo chown /etc/gitconfig zesham2:zesham2 /etc/gitconfig
+  864  sudo chown zesham2:zesham2 /etc/gitconfig
+  865  git config --global user.name "Mohammed Zeshan home CENTOS7 LinuxVM"
+  866  git config --global user.email "khan.mza@gmail.com"
+  867  git config --global core.editor vi
+  868  git config --system http.sslverify false
+  870   git branch
+  871  git branch firstbranch
+  872  git branch
+  873  git checkout firstbranch 
+  875  git add README.yum
+  876  git commit -m "firstbrnach change"
+  877  git checkout master
+  878  git merge firstbranch 
+  879  git status
+  880  git branch
+  881  git branch -d firstbranch 
+  882  history |grep git >> README.gitcommands
+  883  git add README.gitcommands
+  884  git commit -m "added new file README.gitcommands:
+  885   git remote add origin https://bitbucket.org/SystemOneEngineers/clipgrab
+  886  history |grep git >> README.gitcommands
