@@ -42,6 +42,7 @@ void MainWindow::init()
     //* Adding version info to the footer
     //*
     this->ui.label->setText(ui.label->text().replace("%version", "ClipGrab " + QCoreApplication::applicationVersion()));
+	
 
     //*
     //* Tray Icon
@@ -239,6 +240,7 @@ void MainWindow::init()
 
 void MainWindow::startDownload()
 {
+	printf("Mohammed : This is a test and repeats with every new video download in parallel \n");
     QString targetDirectory = cg->settings.value("savedPath", QDesktopServices::storageLocation(QDesktopServices::DesktopLocation)).toString();
     QString fileName = currentVideo->getSaveTitle();
 
