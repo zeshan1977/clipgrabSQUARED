@@ -346,7 +346,7 @@ void MainWindow::compatiblePortalFound(bool found, QString url, video* portal)
     {
         if (ui.downloadLineEdit->text() == "")
         {
-            ui.downloadInfoBox->setText(tr("Please enter the link to the video you want to download in the field below."));
+            ui.downloadInfoBox->setText(tr(" mohammed z :Please enter the link to the video you want to download in the field below."));
         }
         else if (ui.downloadLineEdit->text().startsWith("http://") || ui.downloadLineEdit->text().startsWith("https://"))
         {            
