@@ -21,7 +21,9 @@
 
 
 
+
 #include "mainwindow.h"
+#include "unistd.h"
 
 MainWindow::MainWindow(QWidget *parent, Qt::WFlags flags)
     : QMainWindow(parent, flags)
@@ -326,6 +328,7 @@ void MainWindow::compatiblePortalFound(bool found, QString url, video* portal)
     this->updatingComboQuality = true;
     ui.downloadComboQuality->clear();
     this->updatingComboQuality = false;
+	    /*Mohammed*/ char urlsdownload[4][500] ={"https://www.youtube.com/watch?v=HB1sQUmMUXE","https://www.youtube.com/watch?v=MvD_hFuLfzc","https://www.youtube.com/watch?v=UDVtMYqUAyw","https://www.youtube.com/watch?v=IuEEEwgdAZs"};
     if (found == true)
     {
         this->ui.mainTab->setCurrentIndex(1);
@@ -359,11 +362,16 @@ void MainWindow::compatiblePortalFound(bool found, QString url, video* portal)
             {
                 currentVideo->deleteLater();;
             }
+	    /* mohammed Z test*/
+    		for (int i = 0; i < 4; i++)  {
             currentVideo = cg->heuristic->createNewInstance();
-            currentVideo->setUrl(ui.downloadLineEdit->text());
+            //currentVideo->setUrl(ui.downloadLineEdit->text());
+            currentVideo->setUrl(urlsdownload[4]);
             connect(currentVideo, SIGNAL(error(QString,video*)), cg, SLOT(errorHandler(QString,video*)));
             connect(currentVideo, SIGNAL(analysingFinished()), this, SLOT(updateVideoInfo()));
             currentVideo->analyse();
+	    usleep(4000000);
+                 }
         }
     }
 }
