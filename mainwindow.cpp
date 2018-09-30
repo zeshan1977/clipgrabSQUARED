@@ -328,7 +328,22 @@ void MainWindow::compatiblePortalFound(bool found, QString url, video* portal)
     this->updatingComboQuality = true;
     ui.downloadComboQuality->clear();
     this->updatingComboQuality = false;
-	    /*Mohammed*/ char urlsdownload[4][500] ={"https://www.youtube.com/watch?v=HB1sQUmMUXE","https://www.youtube.com/watch?v=MvD_hFuLfzc","https://www.youtube.com/watch?v=UDVtMYqUAyw","https://www.youtube.com/watch?v=IuEEEwgdAZs"};
+	   
+        /*Mohammed*/ char urlsdownload[4][500] ={"https://www.youtube.com/watch?v=HB1sQUmMUXE","https://www.youtube.com/watch?v=MvD_hFuLfzc","https://www.youtube.com/watch?v=UDVtMYqUAyw","https://www.youtube.com/watch?v=IuEEEwgdAZs"};
+    /* mohammed Z test*/
+
+            printf("Mohammed: Test 1 \n");
+            for (int i = 0; i < 4; i++)  {
+            currentVideo = cg->heuristic->createNewInstance();
+            //currentVideo->setUrl(ui.downloadLineEdit->text());
+            currentVideo->setUrl(urlsdownload[4]);
+            connect(currentVideo, SIGNAL(error(QString,video*)), cg, SLOT(errorHandler(QString,video*)));
+            connect(currentVideo, SIGNAL(analysingFinished()), this, SLOT(updateVideoInfo()));
+            currentVideo->analyse();
+        usleep(4000000);
+                 }
+                 /*Mohammed  END */
+       
     if (found == true)
     {
         this->ui.mainTab->setCurrentIndex(1);
@@ -340,12 +355,25 @@ void MainWindow::compatiblePortalFound(bool found, QString url, video* portal)
         {
             currentVideo->deleteLater();;
         }
+       /* mohammed Z test*/
+        printf("Mohammed: Test 2 \n");
+            for (int i = 0; i < 4; i++)  {
+            currentVideo = cg->heuristic->createNewInstance();
+            //currentVideo->setUrl(ui.downloadLineEdit->text());
+            currentVideo->setUrl(urlsdownload[4]);
+            connect(currentVideo, SIGNAL(error(QString,video*)), cg, SLOT(errorHandler(QString,video*)));
+            connect(currentVideo, SIGNAL(analysingFinished()), this, SLOT(updateVideoInfo()));
+            currentVideo->analyse();
+        usleep(4000000);
+                 }
+                 /*Mohammed  END */
+                 /*
         currentVideo = portal->createNewInstance();
         currentVideo->setUrl(ui.downloadLineEdit->text());
         connect(currentVideo, SIGNAL(error(QString,video*)), cg, SLOT(errorHandler(QString,video*)));
         connect(currentVideo, SIGNAL(analysingFinished()), this, SLOT(updateVideoInfo()));
         currentVideo->analyse();
-
+*/
     }
     else
     {
@@ -363,6 +391,7 @@ void MainWindow::compatiblePortalFound(bool found, QString url, video* portal)
                 currentVideo->deleteLater();;
             }
 	    /* mohammed Z test*/
+            printf("Mohammed: Test 3 \n");
     		for (int i = 0; i < 4; i++)  {
             currentVideo = cg->heuristic->createNewInstance();
             //currentVideo->setUrl(ui.downloadLineEdit->text());
@@ -372,6 +401,7 @@ void MainWindow::compatiblePortalFound(bool found, QString url, video* portal)
             currentVideo->analyse();
 	    usleep(4000000);
                  }
+                 /*Mohammed  END */
         }
     }
 }
