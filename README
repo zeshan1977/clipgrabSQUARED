@@ -4,6 +4,14 @@ You will only need the Qt4 developer libraries in order to compile the program.
 In addition, ffmpeg (no developer libs necessary) needs to be installed.
 
 
+sudo apt-get install ffmpeg -y
+sudo apt-get install qt4-dev-tools -y
+sudo apt-get -f install -y
+sudo apt-get installi libqtwebkit-dev
+
+
+
+
 To compile ClipGrab, simply execute
 qmake clipgrab.pro && make
 
